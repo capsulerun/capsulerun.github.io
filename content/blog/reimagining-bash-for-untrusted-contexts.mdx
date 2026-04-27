@@ -1,0 +1,49 @@
+---
+title: "Reimagining Bash for untrusted contexts"
+date: "2026-04-28"
+description: "Bash is designed for humans and it should stay that way. When I talk about untrusted contexts, I mean automated processes and AI agents. Both scenarios come to the same conclusion: they are trying to act like humans, but in reality, they don't have the same constraints."
+---
+
+Bash is designed for humans and it should stay that way. When I talk about untrusted contexts, I mean automated processes and AI agents. Both scenarios come to the same conclusion: they are trying to act like humans, but in reality, they don't have the same constraints.
+
+As humans, we don't constantly need textual feedback to reach our goals. We have other concerns like efficiency, developer experience (including visual comfort and ergonomics), concerns that agents don't share.
+
+Bash delivers this experience perfectly for us, but not for untrusted processes.
+
+## Same syntax, different output
+
+Since agents are trained on human data, they know how to use Bash by default. However, it doesn't mean that Bash's output is made for them.
+
+Commands fall into three categories: Observation (ls, grep, cat), Mutation (rm, mv, mkdir), and State (cd, export), which alter the shell's context.
+
+The question arises mainly for mutation and state commands. Humans consider the silence of these as a success; it's the convenient behavior. Having plenty of messages confirming it succeeded would bring a lot of noise into our shell, and we usually don't want that.
+
+For agents, on the other hand, I believe each command should report clear details on state, filesystem changes, and environment configuration to provide the observability and determinism they need.
+
+Here is what that looks like in practice compared to standard Bash:
+
+<BashComparison />
+
+This approach also enriches the context, giving more landmarks.
+
+## Native sandboxing
+
+Sandboxing is the first word that comes to mind when we talk about untrusted processes. If we want to reimagine a Bash adapted for this, it would be a missed opportunity not to have a native sandbox system.
+
+In fact, mutation commands could be handwritten, so we might think sandboxing is less important. But for cases like python3, where an agent executes arbitrary code, it becomes essential. That's why we absolutely want to natively sandbox every logic execution.
+
+<SandboxAnimation />
+
+So, it's interesting to keep this approach and additionally provide its own workspace to not pollute the user's file system.
+
+## Reimagining it
+
+In theory, the solution is quite simple: add more information to the output. In practice, we can't natively structure the commands' output within the existing Bash paradigm.
+
+So, I think the only way is to rebuild Bash commands. The good news is, we don't necessarily need to rebuild everything, only the important ones for untrusted processes. Some open-source alternatives already explore different philosophies, but none quite fit the need yet.
+
+I also created a light proof of concept in TypeScript. It's a long-term project, so it will depend on you and other people wanting to collaborate on this. Feel free to check it out 👉 [GitHub](https://github.com/capsulerun/bash)
+
+The idea isn't to clone Bash. It's to build something more adapted, even if it ends up looking completely different from what we know.
+
+---

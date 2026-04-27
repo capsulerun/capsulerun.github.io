@@ -2,6 +2,8 @@ import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
+import { BashComparison } from "@/interactives/components/bash-comparison";
+import { SandboxAnimation } from "@/interactives/components/sandbox-animation";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -59,7 +61,7 @@ export default async function BlogPostPage(props: {
               </time>
             </header>
 
-            <MDXRemote source={post.content} />
+            <MDXRemote source={post.content} components={{ BashComparison, SandboxAnimation }} />
           </article>
         </main>
       </div>
