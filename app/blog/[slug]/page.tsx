@@ -42,8 +42,8 @@ export default async function BlogPostPage(props: {
     <div className="flex flex-col items-center min-h-screen px-6 font-sans">
       <div className="w-full max-w-2xl">
 
-        <header className="py-14 mb-8 flex justify-center w-full">
-          <Link href="/" className="hover:opacity-80 transition-opacity">
+        <header className="py-14 mb-8 md:mt-20 mt-10 flex justify-center w-full">
+          <Link href="https://github.com/capsulerun/capsule" className="hover:opacity-80 transition-opacity">
             <img src="/logo.svg" alt="Capsule logo" height={64} width={64} className="rounded-md" />
           </Link>
         </header>
@@ -54,7 +54,7 @@ export default async function BlogPostPage(props: {
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-100 leading-[1.15] mb-4">
                 {post.metadata.title}
               </h1>
-              <time className="text-zinc-400 text-md font-medium">
+              <time className="text-zinc-400 text-base font-medium">
                 {formattedDate}
               </time>
             </header>
