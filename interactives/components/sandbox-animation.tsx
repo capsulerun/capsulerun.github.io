@@ -9,7 +9,7 @@ export function SandboxAnimation() {
       <div className="py-24 px-8 flex items-center justify-center min-w-[300px] mx-auto w-max">
 
         {/* 1. Agent */}
-        <div className="relative z-10 shrink-0 mx-4 flex items-center">
+        <div className="relative z-10 shrink-0 mr-4 flex items-center">
           <span className="text-[11px] font-semibold text-zinc-500 uppercase tracking-widest">Agent</span>
         </div>
 
@@ -52,24 +52,31 @@ export function SandboxAnimation() {
             {/* Connecting line to Sandbox */}
             <div className="w-10 border-t-2 border-zinc-700 relative">
                <motion.div
-                 className="absolute -top-[5px] left-0 w-2 h-2 rounded-full bg-blue-500"
+                 className="absolute -top-[5px] left-0 w-2 h-2 rounded-full bg-emerald-400"
                  animate={{ x: [0, 32], opacity: [0, 1, 0] }}
                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 1.6 }}
                />
             </div>
 
             {/* Sandbox Execution Block */}
-            <div className="relative ml-2 z-10 ">
+            <div className="relative ml-2 z-10">
               <motion.div
-                className="absolute -inset-y-3 -inset-x-3 border border-blue-500/30 border-dashed rounded-xl bg-blue-950/10 pointer-events-none"
+                className="absolute -inset-y-3 -inset-x-3 border border-emerald-500/30 border-dashed rounded-xl bg-emerald-950/10 pointer-events-none"
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 3, repeat: Infinity }}
               />
-              <div className="absolute -top-6 left-0 text-[8px] uppercase tracking-widest text-blue-400/80 font-semibold px-1 whitespace-nowrap">
+              <div className="absolute -top-6 left-0 text-[8px] uppercase tracking-widest text-emerald-400/80 font-semibold px-1 whitespace-nowrap">
                 Sandbox
               </div>
-              <div className="w-12 h-12 rounded-xl border border-blue-900/40 bg-black flex items-center justify-center shadow-md">
-                <Code size={18} className="text-blue-400/80" />
+
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-xl border border-emerald-900/40 bg-zinc-950 flex items-center justify-center shadow-md z-10 relative">
+                  <Code size={14} className="text-emerald-400/80" />
+                </div>
+                <div className="flex flex-col z-10 relative pr-2">
+                  <div className="font-mono text-sm text-zinc-200">Execution</div>
+                  <div className="text-[10px] uppercase tracking-widest text-emerald-500 mt-1 font-semibold">Trusted code</div>
+                </div>
               </div>
             </div>
           </div>

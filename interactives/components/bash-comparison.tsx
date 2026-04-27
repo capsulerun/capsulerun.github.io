@@ -93,8 +93,8 @@ export function BashComparison() {
             className="w-full appearance-none rounded-md border border-zinc-700 bg-zinc-900/50 py-1.5 pl-3 pr-8 text-sm text-zinc-300 outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 cursor-pointer shadow-sm transition-colors"
           >
             {COMMANDS.map((c) => (
-              <option key={c.id} value={c.id}>
-                $ {c.command}
+              <option key={c.id} value={c.id} className="text-base">
+                {c.command}
               </option>
             ))}
           </select>
