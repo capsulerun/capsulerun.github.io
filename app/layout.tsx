@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Capsule",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-banner.png",
         width: 1200,
         height: 630,
       },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Capsule",
     description: "Sandboxes for untrusted executions",
-    images: ["/og-image.png"],
+    images: ["/og-banner.png"],
   },
 };
 

@@ -19,7 +19,7 @@ export async function generateMetadata(props: {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
 
-  const imageUrl = post.metadata.image || "/og-image.png";
+  const imageUrl = post.metadata.image || "/og-banner.png";
 
   return {
     title: post.metadata.title,

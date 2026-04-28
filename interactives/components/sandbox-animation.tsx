@@ -33,8 +33,8 @@ export function SandboxAnimation() {
 
             {/* Animated dot entering Top Node */}
             <motion.div
-              className="absolute -left-[3rem] top-[21px] w-2 h-2 rounded-full bg-emerald-400"
-              animate={{ x: [0, 40], opacity: [0, 1, 0] }}
+              className="absolute -left-[3rem] top-[21px] w-2 h-2 rounded-full bg-zinc-500"
+              animate={{ x: [0, 40], opacity: [0, 0.5, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
             />
 
@@ -52,8 +52,8 @@ export function SandboxAnimation() {
             {/* Connecting line to Sandbox */}
             <div className="w-10 border-t-2 border-zinc-700 relative">
                <motion.div
-                 className="absolute -top-[5px] left-0 w-2 h-2 rounded-full bg-emerald-400"
-                 animate={{ x: [0, 32], opacity: [0, 1, 0] }}
+                 className="absolute -top-[5px] left-0 w-2 h-2 rounded-full bg-zinc-500"
+                 animate={{ x: [0, 32], opacity: [0, 0.5, 0] }}
                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 1.6 }}
                />
             </div>
@@ -86,8 +86,8 @@ export function SandboxAnimation() {
 
             {/* Animated dot entering Bottom Node */}
             <motion.div
-              className="absolute -left-[3rem] top-[19px] w-2 h-2 rounded-full bg-blue-500"
-              animate={{ x: [0, 40], opacity: [0, 1, 0] }}
+              className="absolute -left-[3rem] top-[19px] w-2 h-2 rounded-full bg-zinc-500"
+              animate={{ x: [0, 40], opacity: [0, 0.5, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 1.25 }}
             />
 
