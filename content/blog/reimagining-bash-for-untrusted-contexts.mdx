@@ -30,17 +30,17 @@ This approach also enriches the context, giving more landmarks.
 
 Sandboxing is the first word that comes to mind when we talk about untrusted processes. If we want to reimagine a Bash adapted for this, it would be a missed opportunity not to have a native sandbox system.
 
-In fact, mutation commands could be handwritten, so we might think sandboxing is less important. But for cases like python3, where an agent executes arbitrary code, it becomes essential. That's why we absolutely want to natively sandbox every logic execution.
+In fact, mutation commands could be handwritten, so we might think sandboxing is less important. But for cases like python3 command, where an agent executes arbitrary code, it becomes essential. That's why we absolutely want to natively sandbox every logic execution.
 
 <SandboxAnimation />
 
-So, it's interesting to keep this approach and additionally provide its own workspace to not pollute the user's file system.
+It's interesting to keep this approach and additionally provide its own workspace to not pollute the user's file system.
 
 ## Reimagining it
 
 In theory, the solution is quite simple: add more information to the output. In practice, we can't natively structure the commands' output within the existing Bash paradigm.
 
-So, I think the only way is to rebuild Bash commands. The good news is, we don't necessarily need to rebuild everything, only the important ones for untrusted processes. Some open-source alternatives already explore different philosophies, but none quite fit the need yet.
+To me, the only way is to rebuild Bash commands. The good news is, we don't necessarily need to rebuild everything, only the important ones for untrusted processes. Some open-source alternatives already explore different philosophies, but none quite fit the need yet.
 
 I also created a light proof of concept in TypeScript. It's a long-term project, so it will depend on you and other people wanting to collaborate on this. Feel free to check it out 👉 [GitHub](https://github.com/capsulerun/bash)
 

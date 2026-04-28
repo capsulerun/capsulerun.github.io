@@ -82,7 +82,7 @@ export function BashComparison() {
   const activeCommand = COMMANDS.find((c) => c.id === activeId)!;
 
   return (
-    <div className="not-prose  flex flex-col gap-6 rounded-xl border border-zinc-800/60 bg-zinc-950/50 p-4 md:p-6 shadow-2xl">
+    <div className="not-prose  flex flex-col gap-6 rounded-xl border border-zinc-800/60 bg-zinc-950/50 p-4 md:p-6 shadow-xl">
       {/* Header / Dropdown */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 border-b border-zinc-800/50 pb-5">
         <span className="text-sm font-medium text-zinc-400">Executed command:</span>
@@ -90,11 +90,11 @@ export function BashComparison() {
           <select
             value={activeId}
             onChange={(e) => setActiveId(e.target.value)}
-            className="w-full appearance-none rounded-md border border-zinc-700 bg-zinc-900/50 py-1.5 pl-3 pr-8 text-sm text-zinc-300 outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 cursor-pointer shadow-sm transition-colors"
+            className="w-full appearance-none rounded-md border border-zinc-700 bg-zinc-900/50 py-1.5 pl-3 pr-8 text-base outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 cursor-pointer shadow-sm transition-colors"
           >
             {COMMANDS.map((c) => (
-              <option key={c.id} value={c.id} className="text-base">
-                {c.command}
+              <option key={c.id} value={c.id}>
+                $ {c.command}
               </option>
             ))}
           </select>
@@ -126,7 +126,7 @@ export function BashComparison() {
           <div className="absolute inset-0 bg-violet-500/5 pointer-events-none" />
 
           <div className="bg-violet-950/30 px-4 py-2 border-b border-violet-900/30 flex items-center justify-between z-10">
-            <span className="text-xs font-semibold text-violet-400/80 uppercase tracking-wider">Bash for agents</span>
+            <span className="text-xs font-semibold text-violet-400/80 uppercase tracking-wider">Bash for untrusted contexts</span>
           </div>
 
           <div className="p-4 font-mono text-sm min-h-[220px] flex flex-col z-10">
