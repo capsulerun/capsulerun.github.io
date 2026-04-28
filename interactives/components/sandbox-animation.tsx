@@ -5,12 +5,12 @@ import { User, Terminal, Code } from "lucide-react";
 
 export function SandboxAnimation() {
   return (
-    <div className="not-prose rounded-xl border border-zinc-800/60 bg-zinc-950/50 shadow-2xl overflow-x-auto relative scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent">
+    <div className="not-prose rounded-xl border border-zinc-800/60 bg-zinc-950/50 shadow-xl overflow-x-auto relative scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent">
       <div className="py-24 px-8 flex items-center justify-center min-w-[300px] mx-auto w-max">
 
-        {/* 1. Agent */}
+        {/* 1. Bash */}
         <div className="relative z-10 shrink-0 mr-4 flex items-center">
-          <span className="text-[11px] font-semibold text-zinc-500 uppercase tracking-widest">Agent</span>
+          <span className="text-[11px] font-semibold text-zinc-500 uppercase tracking-widest">Bash</span>
         </div>
 
         {/* 2. Stem line */}
