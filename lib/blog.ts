@@ -9,6 +9,7 @@ export interface BlogPostMetadata {
   date: string;
   description: string;
   slug: string;
+  image?: string;
 }
 
 export function getAllPosts(): BlogPostMetadata[] {
@@ -31,6 +32,7 @@ export function getAllPosts(): BlogPostMetadata[] {
         title: matterResult.data.title,
         date: matterResult.data.date,
         description: matterResult.data.description,
+        image: matterResult.data.image,
       } as BlogPostMetadata;
     });
 

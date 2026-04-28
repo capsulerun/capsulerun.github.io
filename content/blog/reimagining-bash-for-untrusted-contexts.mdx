@@ -14,7 +14,7 @@ Bash delivers this experience perfectly for us, but not for untrusted processes.
 
 Since agents are trained on human data, they know how to use Bash by default. However, it doesn't mean that Bash's output is made for them.
 
-Commands fall into three categories: Observation (ls, grep, cat), Mutation (rm, mv, mkdir), and State (cd, export), which alter the shell's context.
+Commands fall into three categories: Observation (ls, grep, cat), Mutation (rm, mv, mkdir), and State (cd, export) which alter the context.
 
 The question arises mainly for mutation and state commands. Humans consider the silence of these as a success; it's the convenient behavior. Having plenty of messages confirming it succeeded would bring a lot of noise into our shell, and we usually don't want that.
 
@@ -24,7 +24,7 @@ Here is what that looks like in practice compared to standard Bash:
 
 <BashComparison />
 
-This approach also enriches the context, giving more landmarks.
+This approach also enriches the context, giving more landmarks to work with.
 
 ## Native sandboxing
 

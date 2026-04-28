@@ -18,9 +18,29 @@ export async function generateMetadata(props: {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
   if (!post) return {};
+
+  const imageUrl = post.metadata.image || "/og-banner.png";
+
   return {
     title: post.metadata.title,
     description: post.metadata.description,
+    openGraph: {
+      title: post.metadata.title,
+      description: post.metadata.description,
+      url: `https://capsulerun.github.io/blog/${params.slug}`,
+      type: "article",
+      images: [
+        {
+          url: imageUrl,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metadata.title,
+      description: post.metadata.description,
+      images: [imageUrl],
+    },
   };
 }
 
