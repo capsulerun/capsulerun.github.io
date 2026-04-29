@@ -34,7 +34,7 @@ In fact, mutation commands could be handwritten, so we might think sandboxing is
 
 <SandboxAnimation />
 
-It's essential to maintain a similar philosophy and additionally provide its own workspace to isolate it from the user's file system.
+It's essential to maintain a similar design and additionally provide its own workspace to isolate it from the user's file system.
 
 ## Reimagining it
 
@@ -42,7 +42,7 @@ In theory, the solution is quite simple: add more information to the output. In 
 
 To me, the only way is to rebuild Bash commands. The good news is, we don't necessarily need to rewrite everything, only the important ones for untrusted processes. Some open-source alternatives already explore different philosophies.
 
-I also created a light proof of concept in TypeScript. It's a long-term project, so it will depend on you and other people wanting to collaborate on this. Feel free to check it out 👉 [GitHub](https://github.com/capsulerun/bash)
+I also created a light proof of concept in TypeScript. It's a long-term project, so it will depend on people wanting to collaborate on this. Feel free to check it out 👉 [GitHub](https://github.com/capsulerun/bash)
 
 The idea isn't to clone Bash. It's to build something more adapted, even if it ends up looking completely different from what we know.
 
