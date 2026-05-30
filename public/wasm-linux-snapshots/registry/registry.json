@@ -2,12 +2,13 @@
   "version": "0.1.0",
   "snapshots": [
     {
-      "name": "alpine-256",
+      "name": "alpine-256mb",
       "tag": "3.23.0",
       "memory_label": "256MB",
       "description": "Alpine Linux 3.23.0 256MB",
-      "url": "https://github.com/capsulerun/wasm-linux-snapshots/releases/download/alpine-3.23.0-256mb.snap",
-      "sha256": "4da5c4a88e20335f0c1b6fffea27c46c4dd7b6f526e5abbaedb97045dc288495"
+      "url": "https://github.com/capsulerun/capsulerun.github.io/releases/download/alpine-3.23.0-256mb/alpine-3.23.0-256mb.snap",
+      "sha256": "a68f420350eebfb8d4678c5d62bae35afd840bc8fea1743e87088b77e819c0df",
+      "size": 45600000
     }
   ]
 }
