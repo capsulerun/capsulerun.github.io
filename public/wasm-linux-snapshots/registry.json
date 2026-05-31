@@ -7,7 +7,7 @@
       "memory_label": "256MB",
       "description": "Alpine Linux 3.23.0 256MB",
       "url": "https://github.com/capsulerun/capsulerun.github.io/releases/download/alpine-3.23.0-256mb/alpine-3.23.0-256mb.snap",
-      "sha256": "a68f420350eebfb8d4678c5d62bae35afd840bc8fea1743e87088b77e819c0df",
+      "sha256": "f0d56691510a79570b289330f875e81a29c8206970fce87a68d4b6572e03c6c1",
       "size": 45600000
     }
   ]
