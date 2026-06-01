@@ -2,12 +2,13 @@
   "version": "0.1.0",
   "snapshots": [
     {
-      "name": "alpine-256mb",
+      "id": "alpine-3.23.0-256mb",
+      "name": "alpine",
       "tag": "3.23.0",
       "memory_label": "256MB",
       "description": "Alpine Linux 3.23.0 256MB",
       "url": "https://github.com/capsulerun/capsulerun.github.io/releases/download/alpine-3.23.0-256mb/alpine-3.23.0-256mb.snap",
-      "sha256": "9ca1a8d07bdf5fbbbf23676fb252fcc5ac5e87439f4c4b00046a9c1e04ec237a",
+      "sha256": "996682ad1d2f7c7d601648e442d3b6483637c941216c49d0f6980b839cf0e674",
       "size": 45600000
     }
   ]
